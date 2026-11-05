@@ -1,9 +1,88 @@
-:root {
-  --font-display:
-    Spline Sans, Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol, Noto Color Emoji;
-  --font-mono:
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-  --font-rounded: 'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif;
-  --font-serif: Georgia, 'Times New Roman', serif;
-}
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css";
+@import "nativewind/theme";
+@import "./theme/tokens.css";
+
+/* ─── Screen layout ─────────────────────────────────────── */
+@utility screen { @apply flex-1 bg-background; }
+@utility screen-content { @apply w-full max-w-5xl self-center gap-6 p-4; }
+
+/* ─── Cards & surfaces ───────────────────────────────────── */
+@utility card { @apply rounded-lg border border-border bg-surface p-5 shadow-sm; }
+@utility card-compact { @apply rounded-lg border border-border bg-surface p-3 shadow-sm; }
+@utility kpi-card { @apply flex-1 rounded-xl bg-surface p-4 shadow-sm; }
+
+/* ─── Buttons ────────────────────────────────────────────── */
+@utility button { @apply items-center justify-center rounded-md; }
+@utility button-primary { @apply bg-orange; }
+@utility button-secondary { @apply bg-orange-light; }
+@utility button-outline { @apply border border-orange bg-surface; }
+@utility button-ghost { @apply bg-transparent; }
+@utility button-destructive { @apply bg-error; }
+
+/* ─── Section headers ────────────────────────────────────── */
+@utility section-header { @apply rounded-md bg-orange px-4 py-3; }
+@utility page-header { @apply bg-orange px-4 py-3; }
+@utility section-label { @apply font-prompt-semi-bold text-caption text-text-secondary uppercase; }
+@utility hero-banner { @apply rounded-xl bg-orange-light p-5; }
+
+/* ─── Form fields ────────────────────────────────────────── */
+@utility field { @apply min-h-12 rounded-md border border-border bg-surface px-3 py-2 font-prompt-regular text-body-large text-text-primary; }
+@utility field-error { @apply border-error; }
+@utility input-row { @apply flex-row items-center gap-2 rounded-md border border-border bg-surface px-3 min-h-12; }
+
+/* ─── Badges & chips ─────────────────────────────────────── */
+@utility badge { @apply self-start rounded-pill bg-orange-light px-3 py-1; }
+@utility chip { @apply self-start rounded-pill px-2.5 py-0.5; }
+@utility chip-success { @apply bg-success-light; }
+@utility chip-warning { @apply bg-warning-light; }
+@utility chip-error { @apply bg-error-light; }
+@utility chip-info { @apply bg-info-light; }
+@utility chip-neutral { @apply bg-border; }
+@utility chip-orange { @apply bg-orange-light; }
+
+/* ─── Separators ─────────────────────────────────────────── */
+@utility divider { @apply h-px bg-border; }
+
+/* ─── Typography scale ───────────────────────────────────── */
+@utility type-h1 { @apply font-prompt-bold text-h1 text-navy; }
+@utility type-h2 { @apply font-prompt-semi-bold text-h2 text-navy; }
+@utility type-h3 { @apply font-prompt-semi-bold text-h3 text-navy; }
+@utility type-h4 { @apply font-prompt-medium text-h4 text-text-primary; }
+@utility type-body-large { @apply font-prompt-regular text-body-large text-text-primary; }
+@utility type-body { @apply font-prompt-regular text-body-large text-text-primary; }
+@utility type-body-small { @apply font-prompt-regular text-body-small text-text-secondary; }
+@utility type-caption { @apply font-prompt-regular text-caption text-text-secondary; }
+@utility type-label { @apply font-prompt-semi-bold text-body-small text-text-primary; }
+
+/* ─── KPI / metric display ───────────────────────────────── */
+@utility kpi-value { @apply font-prompt-bold text-h2 text-orange; }
+@utility kpi-label { @apply font-prompt-regular text-caption text-text-secondary; }
+
+/* ─── Avatars ────────────────────────────────────────────── */
+@utility avatar-sm { @apply h-8 w-8 items-center justify-center rounded-full overflow-hidden; }
+@utility avatar-md { @apply h-10 w-10 items-center justify-center rounded-full overflow-hidden; }
+@utility avatar-lg { @apply h-14 w-14 items-center justify-center rounded-full overflow-hidden; }
+@utility avatar-xl { @apply h-20 w-20 items-center justify-center rounded-full overflow-hidden; }
+@utility avatar-placeholder { @apply bg-orange-light; }
+
+/* ─── List rows ──────────────────────────────────────────── */
+@utility list-item { @apply flex-row items-center gap-3 py-3; }
+
+/* ─── Detail info rows (label + value pairs) ─────────────── */
+@utility info-row { @apply flex-row items-start gap-2 py-2; }
+@utility info-label { @apply w-28 font-prompt-regular text-caption text-text-secondary; }
+@utility info-value { @apply flex-1 font-prompt-medium text-body-medium text-text-primary; }
+
+/* ─── Bottom navigation bar ──────────────────────────────── */
+@utility bottom-nav { @apply flex-row bg-surface border-t border-border; }
+@utility bottom-nav-item { @apply flex-1 items-center justify-center py-3 gap-1; }
+@utility bottom-nav-label { @apply font-prompt-regular text-caption; }
+@utility bottom-nav-label-active { @apply text-orange; }
+@utility bottom-nav-label-inactive { @apply text-text-secondary; }
+
+/* ─── Role selector pills ────────────────────────────────── */
+@utility role-chip { @apply rounded-pill px-3 py-1 items-center justify-center; }
+@utility role-chip-active { @apply bg-orange; }
+@utility role-chip-inactive { @apply bg-surface border border-border; }

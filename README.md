@@ -54,3 +54,37 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+
+
+# Mee Tuck Insurance — Design System
+
+Original Mee Tuck branding inspired by the supplied visual references. No official FWD logo is recreated in vector branding. Uploaded reference images are retained under assets/images and assets/mascot for visual comparison and may contain third-party marks; check rights before commercial publication. Sample insurance figures are **UI mock data only**, not verified quotations.
+
+## Contents
+- `assets/logos`: editable SVG and PNG primary/secondary/light/dark marks
+- `assets/icons`: original app icon/favicon in SVG and PNG
+- `assets/mascot`: original editable vector mascot and supplied mascot visual reference
+- `tokens`: CSS, TypeScript and JSON design tokens
+- `components`: React TypeScript components and shared CSS
+- `react/examples`: Vite dashboard demo
+- `nextjs/examples`: Next.js app router example
+- `react-native/examples`: Expo screen and reusable native card
+- `preview/design-system.html`: browser board; `design-system.png` is 1920×1080
+
+## Quick start
+1. Open the folder in VS Code.
+2. Preview `preview/design-system.html` with a browser or Live Server.
+3. React demo: `cd react/examples && npm install && npm run dev`.
+4. Next.js: create a Next app, copy the example and shared components, then import shared CSS in `app/layout.tsx`.
+5. Expo: create a new Expo project and copy files from `react-native/examples`.
+6. Import `tokens/tokens.css` globally for web, or `tokens/tokens.ts` for TypeScript.
+
+## Accessibility and responsive behavior
+Mobile-first layout: 375px / 768px / 1440px. Use visible focus, semantic controls, 44px minimum touch targets and accessible labels. Contrast should be verified for all custom combinations before release.
+
+## Font licensing
+Fonts are loaded from Google Fonts via CSS; font binary files are not bundled. For Expo use `expo-font` with your own licensed Prompt/Poppins font assets.
+
+## Component states
+Buttons include hover, active, disabled; inputs include focus and native invalid/error; tab navigation includes selected state. Extend the example primitives for production validation, keyboard handling and screen reader testing.

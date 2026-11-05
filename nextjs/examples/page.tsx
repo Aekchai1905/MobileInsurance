@@ -1,0 +1,1 @@
+import React from 'react';import {InsuranceProductCard} from '../../components/cards/InsuranceProductCard';export default function Page(){return <main style={{padding:32}}><h1>Mee Tuck Insurance</h1><InsuranceProductCard/></main>}

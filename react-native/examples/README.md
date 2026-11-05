@@ -1,0 +1,1 @@
+Create an Expo app with `npx create-expo-app@latest`, copy App.tsx, theme.ts and InsuranceProductCard.tsx into its root, then run `npx expo start`. Install Prompt and Poppins via expo-font if local licensed font assets are available.

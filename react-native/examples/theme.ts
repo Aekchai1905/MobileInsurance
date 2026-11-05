@@ -1,0 +1,1 @@
+export const theme={colors:{primary:'#FF8000',background:'#F8FAFC',surface:'#FFFFFF',text:'#111827',success:'#21C16B'},spacing:{sm:8,md:16,lg:24},radius:{md:12,lg:18},fontFamily:{thai:'Prompt',english:'Poppins'}} as const;
